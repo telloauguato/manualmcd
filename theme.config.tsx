@@ -9,12 +9,12 @@ const config: DocsThemeConfig = {
   docsRepositoryBase: 'https://github.com/telloauguato/manualmcd',
   footer: {
     text: `Manual McD ${new Date().getFullYear()} — by @telloauguato`,
-  }, 
+  },
   useNextSeoProps() {
-      return {
-        titleTemplate: '%s – Manual McD'
-      }
-  }, 
+    return {
+      titleTemplate: '%s – Manual McD'
+    }
+  },
   banner: {
     key: 'contribute',
     text: (
@@ -22,11 +22,11 @@ const config: DocsThemeConfig = {
         🖋 Entre e contribua com as comunidade →
       </a>
     )
-  }, 
+  },
   navigation: {
     prev: true,
     next: true
-  }, 
+  },
   faviconGlyph: '🍔'
 }
 
