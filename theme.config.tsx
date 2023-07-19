@@ -15,6 +15,13 @@ const config: DocsThemeConfig = {
       titleTemplate: '%s – Manual McD'
     }
   },
+  head: (
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta property="og:title" content="Manual McD" />
+      <meta property="og:description" content="Manual McD" />
+    </>
+  ), 
   banner: {
     key: 'contribute',
     text: (
