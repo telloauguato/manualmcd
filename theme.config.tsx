@@ -9,10 +9,7 @@ const config: DocsThemeConfig = {
   docsRepositoryBase: 'https://github.com/telloauguato/manualmcd',
   footer: {
     text: `Manual McD ${new Date().getFullYear()} — by @telloauguato`,
-  },
-  prevLinks: true,
-  nextLinks: true,
-  unstable_faviconGlyph: '🍔'
+  }
 }
 
 export default config
