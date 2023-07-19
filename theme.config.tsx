@@ -11,12 +11,9 @@ const config: DocsThemeConfig = {
     text: `Manual McD ${new Date().getFullYear()} — by @telloauguato`,
   }, 
   useNextSeoProps() {
-    const { asPath } = useRouter()
-    if (asPath !== '/') {
       return {
         titleTemplate: '%s – Manual McD'
       }
-    }
   }, 
   banner: {
     key: 'contribute',
