@@ -1,5 +1,6 @@
 import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import { DocsThemeConfig, useConfig } from 'nextra-theme-docs'
+import { useRouter } from 'next/router'
 
 const config: DocsThemeConfig = {
   logo: <span>Manual McD</span>,
@@ -15,13 +16,24 @@ const config: DocsThemeConfig = {
       titleTemplate: '%s – Manual McD'
     }
   },
-  head: (
-    <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta property="og:title" content="Manual McD" />
-      <meta property="og:description" content="Manual McD" />
-    </>
-  ), 
+  head: () => {
+    const { asPath, defaultLocale, locale } = useRouter()
+    const { frontMatter } = useConfig()
+    const url =
+      'https://manualmcd.vercel.app' +
+      (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
+
+    return (
+      <>
+        <meta property="og:url" content={url} />
+        <meta property="og:title" content={frontMatter.title || 'Manual McD'} />
+        <meta
+          property="og:description"
+          content={frontMatter.description || 'Manual Online McD'}
+        />
+      </>
+    )
+  },
   banner: {
     key: 'contribute',
     text: (
