@@ -10,7 +10,6 @@ const config: DocsThemeConfig = {
   footer: {
     text: `Manual McD ${new Date().getFullYear()} — by @telloauguato`,
   },
-  titleSuffix:' — Manual McD',
   prevLinks: true,
   nextLinks: true,
   unstable_faviconGlyph: '🍔'
